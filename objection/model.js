@@ -14,15 +14,13 @@ class developers extends Model {
     static get jsonSchema() {
         return {
             type: 'object',
-            required: ['uid', 'userName', 'passWord', 'age', 'createdAt', 'updatedAt'],
-
+            required: ['uid', 'username','pass'],
             properties: {
-                uid: { type: 'string', maxLength: 255 },
-                userName: { type: 'string', minLength: 8, maxLength: 255 },
-                passWord: { type: 'string'},
-                age: { type: 'number', minLength: 1},
-                createdAt: { type: 'datetime', default: new Date()},
-                updatedAt: { type: 'datetime', default: new Date()}
+                uid: {type: 'string', maxLength: 255},
+                username: {type: 'string', minLength: 8, maxLength: 255},
+                pass: {type: 'string', maxLength: 255},
+                createdAt: {type: 'number'},
+                updatedAt: {type: 'number'},
             }
         };
     }
